@@ -43,8 +43,8 @@ RUN pecl install -o -f redis \
 
 RUN a2enmod rewrite
 
-ADD .docker/apache.conf /etc/apache2/sites-available/000-default.conf
-ADD .docker/php.ini ${PHP_INI_DIR}/conf.d/99-overrides.ini
+ADD .docker/build/apache.conf /etc/apache2/sites-available/000-default.conf
+ADD .docker/build/php.ini ${PHP_INI_DIR}/conf.d/99-overrides.ini
 
 WORKDIR /app
 COPY --from=backend /app /app

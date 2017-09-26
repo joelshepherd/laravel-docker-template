@@ -18,6 +18,6 @@ Used to power the Laravel API cluster behind [https://question.cafe](https://que
 - Docker version `>=17.05` (for multi-stage builds)
 
 ## How to use
-1. Copy the `Dockerfile`, `.docker` folder and `.dockerignore` into your project
+1. Copy the `.docker` folder and `.dockerignore` into your project
 2. Edit the configuration files as necessary (php extensions, different npm build command etc.)
-3. Run `docker build .` and ship the image!
+3. Run `docker build -f .docker/build/Dockerfile .` and ship the image!
